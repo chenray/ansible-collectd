@@ -4,22 +4,23 @@
   yum: 
      name=collectd-mysql 
      state=present
-  when: "'mysql' in {{ extra_plugins }}"
+  when: "'mysql' in extra_plugins"
 
 - name: install memcache plugin
   yum: 
     name=collectd-memcachec 
     state=present
-  when: "'memcache' in {{ extra_plugins }}"
+  when: "'memcache' in extra_plugins"
 
 - name: install varnish plugin
   yum: 
     name=collectd-varnish 
     state=present
-  when: "'varnish' in {{ extra_plugins }}"  
+  when: "'varnish' in extra_plugins"  
 
 - name: install nginx plugin
   yum: 
      name=collectd-nginx 
      state=present
-  when: "'nginx' in {{ extra_plugins }}"  
+  when: "'nginx' in extra_plugins"  
+

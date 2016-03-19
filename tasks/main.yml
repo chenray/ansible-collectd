@@ -1,6 +1,6 @@
 ---
 
-- include: "collectd_redhat.yml"
+- include: "collectd_redhat_{{collectd_install}}.yml"
   when: ansible_os_family == "RedHat" 
 
 - include: "collectd_debian_{{collectd_install}}.yml"
